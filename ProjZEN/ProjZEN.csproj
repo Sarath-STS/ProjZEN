@@ -1,0 +1,706 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99D4FB7C-BCB3-4B78-9E3D-3D49A55A4085}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjZEN</RootNamespace>
+    <AssemblyName>ProjZEN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44342</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="ActiveDonor.aspx" />
+    <Content Include="ActiveUser.aspx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="AdminAssets\css\bootstrap.css" />
+    <Content Include="AdminAssets\css\font-awesome.css" />
+    <Content Include="AdminAssets\css\style.css" />
+    <Content Include="AdminAssets\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminAssets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AdminAssets\img\1.jpg" />
+    <Content Include="AdminAssets\img\1d.PNG" />
+    <Content Include="AdminAssets\img\2.jpg" />
+    <Content Include="AdminAssets\img\3.jpg" />
+    <Content Include="AdminAssets\img\Agape-School-blood-drive-3-11-16.png" />
+    <Content Include="AdminAssets\img\akshay.jpg" />
+    <Content Include="AdminAssets\img\amit.png" />
+    <Content Include="AdminAssets\img\background.png" />
+    <Content Include="AdminAssets\img\bdr.PNG" />
+    <Content Include="AdminAssets\img\bgblood.gif" />
+    <Content Include="AdminAssets\img\blood-bank.jpg" />
+    <Content Include="AdminAssets\img\blood-donation-logo_23-2147506524.jpg" />
+    <Content Include="AdminAssets\img\camp.jpg" />
+    <Content Include="AdminAssets\img\circle img.jpg" />
+    <Content Include="AdminAssets\img\d2.PNG" />
+    <Content Include="AdminAssets\img\d4.PNG" />
+    <Content Include="AdminAssets\img\dd.PNG" />
+    <Content Include="AdminAssets\img\hands-saving-blood-drop_1017-19141.jpg" />
+    <Content Include="AdminAssets\img\homologo.png" />
+    <Content Include="AdminAssets\img\IMG_20220926_214923_638.jpg" />
+    <Content Include="AdminAssets\img\leftImg.jpg" />
+    <Content Include="AdminAssets\img\logo-give-blood.jpg" />
+    <Content Include="AdminAssets\img\logo.jpg" />
+    <Content Include="AdminAssets\img\obama.jpg" />
+    <Content Include="AdminAssets\img\PM_Modi_2015.jpg" />
+    <Content Include="AdminAssets\img\rImg.jpg" />
+    <Content Include="AdminAssets\img\rq.PNG" />
+    <Content Include="AdminAssets\img\sachin.jpg" />
+    <Content Include="AdminAssets\img\save.jpg" />
+    <Content Include="AdminAssets\img\tom.png" />
+    <Content Include="AdminAssets\img\user.gif" />
+    <Content Include="AdminAssets\img\WhatsApp Image 2019-10-25 at 3.58.29 PM.jpeg" />
+    <Content Include="AdminAssets\img\will.png" />
+    <Content Include="AdminAssets\js\bootstrap.js" />
+    <Content Include="AdminAssets\js\custom.js" />
+    <Content Include="AdminAssets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="AdminAssets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="AdminAssets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="AdminAssets\js\jquery-1.10.2.js" />
+    <Content Include="boostrap\7309e60dbb71035d864f6bc1f1d6c589.jpg" />
+    <Content Include="boostrap\animate.min.css" />
+    <Content Include="boostrap\background.png" />
+    <Content Include="boostrap\black background.png" />
+    <Content Include="boostrap\bloaoodddd.png" />
+    <Content Include="boostrap\blue blood background.png" />
+    <Content Include="boostrap\cropped-1366-768-320144.jpg" />
+    <Content Include="boostrap\cropped-1366-768-329050.jpg" />
+    <Content Include="boostrap\istockphoto-668371814-1024x1024.jpg" />
+    <Content Include="boostrap\Login_Panel_Image.png" />
+    <Content Include="boostrap\Panel.png" />
+    <Content Include="boostrap\pngtree-geometric-gradient-creative-blood-donation-poster-background-material-image_134137.jpg" />
+    <Content Include="boostrap\Style.css" />
+    <Content Include="boostrap\Transparent Panel 2.png" />
+    <Content Include="boostrap\Transparent Panel 3.png" />
+    <Content Include="boostrap\white background.png" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DonationHistory.aspx" />
+    <Content Include="DonorProfile.aspx" />
+    <Content Include="DonorRegistration.aspx" />
+    <Content Include="DonorRequest.aspx" />
+    <Content Include="Donotion.aspx" />
+    <Content Include="FeedBack.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="IMAGE\02.jpg" />
+    <Content Include="IMAGE\About Us.png" />
+    <Content Include="IMAGE\bg.jpg" />
+    <Content Include="IMAGE\blood-bank.jpg" />
+    <Content Include="IMAGE\Blood.png" />
+    <Content Include="IMAGE\blooddrop.jpg" />
+    <Content Include="IMAGE\Blood_Bank_MS_364.png" />
+    <Content Include="IMAGE\download %281%29.jpg" />
+    <Content Include="IMAGE\newdrop.jpg" />
+    <Content Include="IMAGE\news_blood_donation %281%29.jpg" />
+    <Content Include="InactiveDonor.aspx" />
+    <Content Include="InactiveUser.aspx" />
+    <Content Include="LOGIN.aspx" />
+    <Content Include="main\apple-touch-icon.html" />
+    <Content Include="main\assets\css\bootstrap.min.css" />
+    <Content Include="main\assets\css\calendar\calendar.css" />
+    <Content Include="main\assets\css\calendar\fullcalendar.min.css" />
+    <Content Include="main\assets\css\chart\c3.min.css" />
+    <Content Include="main\assets\css\chart\chart.css" />
+    <Content Include="main\assets\css\chart\chartist.min.css" />
+    <Content Include="main\assets\css\chart\morris.css" />
+    <Content Include="main\assets\css\countrySelect.min.css" />
+    <Content Include="main\assets\css\e-commerce\e-commerce.css" />
+    <Content Include="main\assets\css\flags.png" />
+    <Content Include="main\assets\css\font-awesome.min.css" />
+    <Content Include="main\assets\css\forms\chosen-sprite%402x.png" />
+    <Content Include="main\assets\css\forms\chosen-sprite.png" />
+    <Content Include="main\assets\css\forms\chosen.min.css" />
+    <Content Include="main\assets\css\forms\forms.css" />
+    <Content Include="main\assets\css\icon-weather.css" />
+    <Content Include="main\assets\css\index-01.css" />
+    <Content Include="main\assets\css\index-02.css" />
+    <Content Include="main\assets\css\ionicons.min.css" />
+    <Content Include="main\assets\css\linea-basic.css" />
+    <Content Include="main\assets\css\mail\blue%402x.png" />
+    <Content Include="main\assets\css\mail\blue.png" />
+    <Content Include="main\assets\css\mail\bootstrap3-wysihtml5.min.css" />
+    <Content Include="main\assets\css\mail\mail.css" />
+    <Content Include="main\assets\css\owl.carousel.min.css" />
+    <Content Include="main\assets\css\owl.video.play.html" />
+    <Content Include="main\assets\css\pages\blog.css" />
+    <Content Include="main\assets\css\pages\pages.css" />
+    <Content Include="main\assets\css\pe-icon-7-stroke.css" />
+    <Content Include="main\assets\css\perfect-scrollbar.css" />
+    <Content Include="main\assets\css\presets.css" />
+    <Content Include="main\assets\css\responsive.css" />
+    <Content Include="main\assets\css\simple-line-icons.css" />
+    <Content Include="main\assets\css\style.css" />
+    <Content Include="main\assets\css\tables\dataTables.bootstrap4.css" />
+    <Content Include="main\assets\css\tables\tables.css" />
+    <Content Include="main\assets\css\ui\alerts.css" />
+    <Content Include="main\assets\css\ui\buttons.css" />
+    <Content Include="main\assets\css\ui\card.css" />
+    <Content Include="main\assets\css\ui\dropdown.css" />
+    <Content Include="main\assets\css\ui\modals.css" />
+    <Content Include="main\assets\css\ui\progress-bars.css" />
+    <Content Include="main\assets\css\ui\ribbons.css" />
+    <Content Include="main\assets\css\ui\sliders.css" />
+    <Content Include="main\assets\css\ui\tab.css" />
+    <Content Include="main\assets\css\widget\blog.html" />
+    <Content Include="main\assets\css\widget\jquery-jvectormap.css" />
+    <Content Include="main\assets\css\widget\magnific-popup.css" />
+    <Content Include="main\assets\css\widget\widgets.css" />
+    <Content Include="main\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="main\assets\fonts\ionicons790f.svg" />
+    <Content Include="main\assets\fonts\linea-basic-10.svg" />
+    <Content Include="main\assets\fonts\linea-weather-10.svg" />
+    <Content Include="main\assets\fonts\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="main\assets\fonts\Simple-Line-Iconsb26c.svg" />
+    <Content Include="main\assets\js\calendar\fullcalendar.min.js" />
+    <Content Include="main\assets\js\calendar\moment.js" />
+    <Content Include="main\assets\js\charts\c3\c3.chart.init.js" />
+    <Content Include="main\assets\js\charts\c3\c3.min.js" />
+    <Content Include="main\assets\js\charts\c3\d3.min.js" />
+    <Content Include="main\assets\js\charts\chartist\chartist-plugin-legend.js" />
+    <Content Include="main\assets\js\charts\chartist\chartist.init.js" />
+    <Content Include="main\assets\js\charts\chartist\chartist.min.js" />
+    <Content Include="main\assets\js\charts\chartjs\chart.js" />
+    <Content Include="main\assets\js\charts\chartjs\Chart.min.js" />
+    <Content Include="main\assets\js\charts\flot\flot.chart.init.js" />
+    <Content Include="main\assets\js\charts\flot\jquery.flot.js" />
+    <Content Include="main\assets\js\charts\flot\jquery.flot.pie.js" />
+    <Content Include="main\assets\js\charts\flot\jquery.flot.resize.js" />
+    <Content Include="main\assets\js\charts\flot\jquery.flot.spline.js" />
+    <Content Include="main\assets\js\charts\gauge\gage.chart.init.js" />
+    <Content Include="main\assets\js\charts\gauge\gauge.min.js" />
+    <Content Include="main\assets\js\charts\gauge\raphael-2.1.4.min.js" />
+    <Content Include="main\assets\js\charts\google\google.chart.init.js" />
+    <Content Include="main\assets\js\charts\morris\morris.init.js" />
+    <Content Include="main\assets\js\charts\morris\morris.js" />
+    <Content Include="main\assets\js\charts\morris\raphael-min.js" />
+    <Content Include="main\assets\js\charts\rickshaw\d3.js" />
+    <Content Include="main\assets\js\charts\rickshaw\ResizeSensor.js" />
+    <Content Include="main\assets\js\charts\rickshaw\rickshaw.init.js" />
+    <Content Include="main\assets\js\charts\rickshaw\rickshaw.min.js" />
+    <Content Include="main\assets\js\charts\sparkline\jquery.sparkline.min.js" />
+    <Content Include="main\assets\js\charts\sparkline\sparkline.chart.init.js" />
+    <Content Include="main\assets\js\forms\chosen.jquery.min.js" />
+    <Content Include="main\assets\js\forms\forms.js" />
+    <Content Include="main\assets\js\index\index-01.js" />
+    <Content Include="main\assets\js\jquery-3.2.1.slim.min.js" />
+    <Content Include="main\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="main\assets\js\mail\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="main\assets\js\mail\icheck.js" />
+    <Content Include="main\assets\js\mail\mailbox.js" />
+    <Content Include="main\assets\js\main.js" />
+    <Content Include="main\assets\js\owl.carousel.min.js" />
+    <Content Include="main\assets\js\plugins.js" />
+    <Content Include="main\assets\js\tables\dataTables.bootstrap4.js" />
+    <Content Include="main\assets\js\tables\dataTables.bootstrap4.min.js" />
+    <Content Include="main\assets\js\tables\jquery.dataTables.js" />
+    <Content Include="main\assets\js\tables\jquery.dataTables.min.js" />
+    <Content Include="main\assets\js\tables\mindmup-editabletable.js" />
+    <Content Include="main\assets\js\tables\numeric-input-example.js" />
+    <Content Include="main\assets\js\tables\tables.js" />
+    <Content Include="main\assets\js\widgets\charts.init.js" />
+    <Content Include="main\assets\js\widgets\gauge.js" />
+    <Content Include="main\assets\js\widgets\jquery.knob.min.js" />
+    <Content Include="main\assets\js\widgets\jvectormap.bundle.js" />
+    <Content Include="main\assets\js\widgets\knob.init.js" />
+    <Content Include="main\assets\js\widgets\static.js" />
+    <Content Include="main\assets\js\widgets\weather.js" />
+    <Content Include="main\assets\js\widgets\widgets.js" />
+    <Content Include="main\calendar.html" />
+    <Content Include="main\change-log.html" />
+    <Content Include="main\charts\apple-touch-icon.html" />
+    <Content Include="main\charts\c3.html" />
+    <Content Include="main\charts\chartist.html" />
+    <Content Include="main\charts\chartjs.html" />
+    <Content Include="main\charts\flot-chart.html" />
+    <Content Include="main\charts\google-charts.html" />
+    <Content Include="main\charts\justGage.html" />
+    <Content Include="main\charts\morris.html" />
+    <Content Include="main\charts\rickshaw.html" />
+    <Content Include="main\charts\sparkline.html" />
+    <Content Include="main\data.html" />
+    <Content Include="main\e-commerce\apple-touch-icon.html" />
+    <Content Include="main\e-commerce\invoice.html" />
+    <Content Include="main\e-commerce\order.html" />
+    <Content Include="main\e-commerce\pricing.html" />
+    <Content Include="main\editable-tables.html" />
+    <Content Include="main\forms\advanced.html" />
+    <Content Include="main\forms\apple-touch-icon.html" />
+    <Content Include="main\forms\basic.html" />
+    <Content Include="main\forms\data.html" />
+    <Content Include="main\forms\editable-tables.html" />
+    <Content Include="main\forms\icons.html" />
+    <Content Include="main\forms\simple.html" />
+    <Content Include="main\forms\table-color.html" />
+    <Content Include="main\forms\wizard.html" />
+    <Content Include="main\icons.html" />
+    <Content Include="main\icons\apple-touch-icon.html" />
+    <Content Include="main\icons\calendar.html" />
+    <Content Include="main\icons\change-log.html" />
+    <Content Include="main\icons\fontawesome.html" />
+    <Content Include="main\icons\index.html" />
+    <Content Include="main\icons\linea.html" />
+    <Content Include="main\icons\simple.html" />
+    <Content Include="main\icons\stroke.html" />
+    <Content Include="main\icons\weather.html" />
+    <Content Include="main\images\admin.jpg" />
+    <Content Include="main\images\avatar\1.jpg" />
+    <Content Include="main\images\avatar\11.jpg" />
+    <Content Include="main\images\avatar\12.jpg" />
+    <Content Include="main\images\avatar\2.jpg" />
+    <Content Include="main\images\avatar\3.jpg" />
+    <Content Include="main\images\avatar\4.jpg" />
+    <Content Include="main\images\avatar\5.jpg" />
+    <Content Include="main\images\avatar\6.jpg" />
+    <Content Include="main\images\avatar\7.jpg" />
+    <Content Include="main\images\avatar\8.jpg" />
+    <Content Include="main\images\avatar\9.jpg" />
+    <Content Include="main\images\bg1.jpg" />
+    <Content Include="main\images\bg2.jpg" />
+    <Content Include="main\images\bg5.jpg" />
+    <Content Include="main\images\bg6.jpg" />
+    <Content Include="main\images\blog\1.jpg" />
+    <Content Include="main\images\blog\2.jpg" />
+    <Content Include="main\images\blog\3.jpg" />
+    <Content Include="main\images\blog\4.jpg" />
+    <Content Include="main\images\blog\5.jpg" />
+    <Content Include="main\images\blog\6.jpg" />
+    <Content Include="main\images\blue.png" />
+    <Content Include="main\images\logo.png" />
+    <Content Include="main\images\logo2.png" />
+    <Content Include="main\images\modal.png" />
+    <Content Include="main\images\placeholder.png" />
+    <Content Include="main\images\slider\1.jpg" />
+    <Content Include="main\images\slider\2.jpg" />
+    <Content Include="main\images\slider\3.jpg" />
+    <Content Include="main\images\slider\7.jpg" />
+    <Content Include="main\images\slider\8.jpg" />
+    <Content Include="main\images\slider\9.jpg" />
+    <Content Include="main\images\slider\f1.jpg" />
+    <Content Include="main\images\slider\f2.jpg" />
+    <Content Include="main\images\slider\f3.jpg" />
+    <Content Include="main\images\userimage.png" />
+    <Content Include="main\images\we.jpg" />
+    <Content Include="main\images\weather\1.jpg" />
+    <Content Include="main\images\weather\2.jpg" />
+    <Content Include="main\images\weather\3.jpg" />
+    <Content Include="main\images\weather\4.jpg" />
+    <Content Include="main\index-02.html" />
+    <Content Include="main\index.html" />
+    <Content Include="main\layout\advanced.html" />
+    <Content Include="main\layout\apple-touch-icon.html" />
+    <Content Include="main\layout\basic.html" />
+    <Content Include="main\layout\boxed.html" />
+    <Content Include="main\layout\fixed.html" />
+    <Content Include="main\layout\sidebar.html" />
+    <Content Include="main\layout\single.html" />
+    <Content Include="main\layout\wizard.html" />
+    <Content Include="main\mail\apple-touch-icon.html" />
+    <Content Include="main\mail\compose.html" />
+    <Content Include="main\mail\inbox.html" />
+    <Content Include="main\mail\read-mail.html" />
+    <Content Include="main\mail\read.html" />
+    <Content Include="main\pages\404.html" />
+    <Content Include="main\pages\500.html" />
+    <Content Include="main\pages\apple-touch-icon.html" />
+    <Content Include="main\pages\blog.html" />
+    <Content Include="main\pages\log-in.html" />
+    <Content Include="main\pages\register.html" />
+    <Content Include="main\pages\single.html" />
+    <Content Include="main\simple.html" />
+    <Content Include="main\table-color.html" />
+    <Content Include="main\tables\apple-touch-icon.html" />
+    <Content Include="main\tables\data.html" />
+    <Content Include="main\tables\editable-tables.html" />
+    <Content Include="main\tables\simple.html" />
+    <Content Include="main\tables\table-color.html" />
+    <Content Include="main\ui\alerts.html" />
+    <Content Include="main\ui\apple-touch-icon.html" />
+    <Content Include="main\ui\badges.html" />
+    <Content Include="main\ui\buttons.html" />
+    <Content Include="main\ui\cards.html" />
+    <Content Include="main\ui\dropdown.html" />
+    <Content Include="main\ui\index.html" />
+    <Content Include="main\ui\list.html" />
+    <Content Include="main\ui\modals.html" />
+    <Content Include="main\ui\progress-bars.html" />
+    <Content Include="main\ui\ribbons.html" />
+    <Content Include="main\ui\sliders.html" />
+    <Content Include="main\ui\tab.html" />
+    <Content Include="main\widgets\apple-touch-icon.html" />
+    <Content Include="main\widgets\chart.html" />
+    <Content Include="main\widgets\social.html" />
+    <Content Include="main\widgets\statistic.html" />
+    <Content Include="main\widgets\weather.html" />
+    <Content Include="Scripts\css\bootstrap-theme.css" />
+    <Content Include="Scripts\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\css\bootstrap.css" />
+    <Content Include="Scripts\css\bootstrap.min.css" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\jquery.min.js" />
+    <Content Include="Scripts\js\npm.js" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="UserProfile.aspx" />
+    <Content Include="UserReg.aspx" />
+    <Content Include="UserRequest.aspx" />
+    <Content Include="ViewDonor.aspx" />
+    <Content Include="ViewStatus.aspx" />
+    <Content Include="ViewUser.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveDonor.aspx.cs">
+      <DependentUpon>ActiveDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActiveDonor.aspx.designer.cs">
+      <DependentUpon>ActiveDonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveUser.aspx.cs">
+      <DependentUpon>ActiveUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActiveUser.aspx.designer.cs">
+      <DependentUpon>ActiveUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonationHistory.aspx.cs">
+      <DependentUpon>DonationHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonationHistory.aspx.designer.cs">
+      <DependentUpon>DonationHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donor.Master.cs">
+      <DependentUpon>Donor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donor.Master.designer.cs">
+      <DependentUpon>Donor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DonorProfile.aspx.cs">
+      <DependentUpon>DonorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorProfile.aspx.designer.cs">
+      <DependentUpon>DonorProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorRegistration.aspx.cs">
+      <DependentUpon>DonorRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorRegistration.aspx.designer.cs">
+      <DependentUpon>DonorRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DonorRequest.aspx.cs">
+      <DependentUpon>DonorRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DonorRequest.aspx.designer.cs">
+      <DependentUpon>DonorRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donotion.aspx.cs">
+      <DependentUpon>Donotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donotion.aspx.designer.cs">
+      <DependentUpon>Donotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack.aspx.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InactiveDonor.aspx.cs">
+      <DependentUpon>InactiveDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InactiveDonor.aspx.designer.cs">
+      <DependentUpon>InactiveDonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InactiveUser.aspx.cs">
+      <DependentUpon>InactiveUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InactiveUser.aspx.designer.cs">
+      <DependentUpon>InactiveUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.aspx.cs">
+      <DependentUpon>LOGIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LOGIN.aspx.designer.cs">
+      <DependentUpon>LOGIN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserReg.aspx.cs">
+      <DependentUpon>UserReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserReg.aspx.designer.cs">
+      <DependentUpon>UserReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRequest.aspx.cs">
+      <DependentUpon>UserRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRequest.aspx.designer.cs">
+      <DependentUpon>UserRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDonor.aspx.cs">
+      <DependentUpon>ViewDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDonor.aspx.designer.cs">
+      <DependentUpon>ViewDonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStatus.aspx.cs">
+      <DependentUpon>ViewStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStatus.aspx.designer.cs">
+      <DependentUpon>ViewStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUser.aspx.cs">
+      <DependentUpon>ViewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUser.aspx.designer.cs">
+      <DependentUpon>ViewUser.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="AdminAssets\fonts\fontawesome-webfont.eot" />
+    <Content Include="AdminAssets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AdminAssets\fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminAssets\fonts\FontAwesome.otf" />
+    <Content Include="AdminAssets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AdminAssets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AdminAssets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="boostrap\Transparent Login Images.zip" />
+    <Content Include="Donor.Master" />
+    <Content Include="Home.Master" />
+    <Content Include="main\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="main\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="main\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="main\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="main\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="main\assets\fonts\ionicons790f.eot" />
+    <Content Include="main\assets\fonts\ionicons790f.ttf" />
+    <Content Include="main\assets\fonts\ionicons790f.woff" />
+    <Content Include="main\assets\fonts\linea-basic-10.eot" />
+    <Content Include="main\assets\fonts\linea-basic-10.ttf" />
+    <Content Include="main\assets\fonts\linea-basic-10.woff" />
+    <Content Include="main\assets\fonts\linea-basic-10d41d.eot" />
+    <Content Include="main\assets\fonts\linea-weather-10.eot" />
+    <Content Include="main\assets\fonts\linea-weather-10.ttf" />
+    <Content Include="main\assets\fonts\linea-weather-10.woff" />
+    <Content Include="main\assets\fonts\Pe-icon-7-strokebb1d.eot" />
+    <Content Include="main\assets\fonts\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="main\assets\fonts\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="main\assets\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="main\assets\fonts\Simple-Line-Iconsb26c.eot" />
+    <Content Include="main\assets\fonts\Simple-Line-Iconsb26c.ttf" />
+    <Content Include="main\assets\fonts\Simple-Line-Iconsb26c.woff" />
+    <Content Include="main\assets\fonts\Simple-Line-Iconsb26c.woff2" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\css\bootstrap-theme.min.css.map" />
+    <Content Include="Scripts\css\bootstrap.css.map" />
+    <Content Include="Scripts\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="User.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a9ee52b1-0a9d-4784-b87b-3a790b844f36}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64384</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44342/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

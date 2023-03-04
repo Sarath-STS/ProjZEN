@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ProjZEN.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" language="javascript">
+     function DisableBackButton() {
+       window.history.forward()
+      }
+     DisableBackButton();
+     window.onload = DisableBackButton;
+     window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+     window.onunload = function() { void (0) }
+    </script>
+    <link href="AdminAssets/css/bootstrap.css" rel="stylesheet" />
+    <link href="AdminAssets/css/font-awesome.css" rel="stylesheet" />
+    <link href="AdminAssets/css/style.css" rel="stylesheet" />
+    <link href="boostrap/animate.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    
+     #logo
+     {
+         width:50px;
+         height:110px;
+         margin-top:-40px;
+
+     }
+     #ho1
+     {
+         width:50px;
+         height:50px;
+         margin-top:-10px;
+     }
+         
+       
+         .style1
+         {
+             width: 302px;
+         }
+         
+       
+         .style2
+         {
+             font-size: 50px;
+         }
+         .style3
+         {
+             font-size: 50px;
+             margin-top:10px;
+             color: #CC0000;
+             height:70px;
+         }
+         .style5
+         {
+             font-family: "Arial Black";
+         }
+         /*.cl1
+         {
+             background-color: #FF3300; 
+             height: 10px;
+             width:100%;
+             margin-right:10px;
+         }*/
+        
+         .Uimg
+         {
+             border-radius:50%;
+             width:80px;
+             height:70px;
+            
+         }
+         .auto-style1 {
+             width: 100%;
+             height: 220px;
+         }
+         .auto-style2 {
+             float: left;
+             height: 0px;
+         }
+         .auto-style3 {
+             visibility: visible;
+             height: 32px;
+             width: 100%;
+         }
+         </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div>
+            <div class="navbar navbar-inverse set-radius-zero">
+            
+        <table style="background-image: url('/AdminAssets/img/WhatsApp%20Image%202019-10-25%20at%203.58.29%20PM.jpeg'); " class="auto-style1">
+
+                    <tr>
+                        <td class="style1">
+                    <div class="navbar-header">
+                    <div style="float:left">
+                        <a class="navbar-brand" href="#">
+                            <h2 style="margin:-5px;" >Donate Blood</h2>
+                            <img src="AdminAssets/img/logo.jpg" id="logo"/>
+                        </a>
+                    </div>
+                </div>
+                </td>
+                        <td class="style2">
+                            <div class="banner">
+                                <div>
+                                    <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
+                                        style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn; width: 99%; height: 101px;">&nbsp;<span class="style5"><strong><span class="style3">&nbsp;&nbsp; Donate Blood: Save Life</span></strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+                                        <a href="Admin.aspx">
+                                            <img src="AdminAssets/img/homologo.png" id="ho1" /></a><asp:Button
+                                                ID="Button1" runat="server" Text="log-out"
+                                                CssClass="btn btn-danger pull-right" OnClick="Button1_Click"/>
+                                    </h1>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="right-div">
+                                &nbsp;
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+        </div>
+
+
+    
+        <div>
+
+            <div>
+               
+                <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6"
+                    DynamicHorizontalOffset="2" Font-Names="Constantia" Font-Size="Larger"
+                    ForeColor="Red" Orientation="Horizontal" StaticSubMenuIndent="10px"
+                    Width="100%" BorderStyle="Solid" RenderingMode="Table" Font-Bold="True" Height="47px">
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#FFCC66" />
+                    <Items>
+                        <asp:MenuItem Text="View Donor" Value="View Donor" NavigateUrl="~/ViewDonor.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="View User" Value="View User" NavigateUrl="~/ViewUser.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Active" Value="Active">
+                            <asp:MenuItem Text="User" Value="User" NavigateUrl="~/ActiveUser.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Donor" Value="Donor" NavigateUrl="~/ActiveDonor.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem Text="Inactive" Value="Inactive">
+                            <asp:MenuItem NavigateUrl="~/InactiveDonor.aspx" Text="Donor" Value="Donor"></asp:MenuItem>
+                            <asp:MenuItem Text="User" Value="User" NavigateUrl="~/InactiveUser.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        </Items>
+                    <StaticHoverStyle BackColor="Yellow" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#FFCC66" />
+                </asp:Menu>
+
+            </div>
+
+        </div>
+ 
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <div style="height: 10px"></div>
+     
+     <div
+            style="text-align: center; font-weight: 700; color: #FFFFFF; background-color: #FF3300; border: solid #800000; font-size: 20px;" class="auto-style3">
+            © 2022 Blood Bank Management, Copyright Reserved by SARATH(STS)
+
+        </div>
+
+        
+
+    </div>
+    </form>
+</body>
+</html>
